@@ -1,0 +1,140 @@
+@font-face {
+    font-family: kufi;
+    src: url("assets/fonts/kufi.ttf")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 115%;
+    font-family: kufi;
+    direction: rtl;
+}
+
+body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(34, 25, 25);
+    overflow: hidden;
+}
+
+header {
+    position: relative;
+    background-color: white;
+    height: 50px;
+    padding-right: 5%;
+}
+
+.hoverable{
+    font-size: .75em;
+    height: 40px;
+    color: rgb(34, 25, 25);
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5vw;
+    margin-top: 5px;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.unhoverable {
+    font-size: .75em;
+    height: 40px;
+    color: rgb(34, 25, 25);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 5vw;
+    margin-top: 5px;
+    padding-right: 2%;
+    padding-left: 2%;
+
+}
+
+
+.hoverable:hover {
+    color: black;
+    font-weight: bold;
+}
+
+
+select {  
+    height: 27%;
+    width: 70%;
+    font-size: 90%;
+    border-radius: .2vw;
+    cursor: pointer;
+    outline: none;
+    margin-top: 12%;
+    padding-right: 2%;
+    padding-left: 2%;
+    
+}
+
+.select {
+    height: 30%;
+    width: 20%;
+    font-size: 1.4vw;
+    color: white;
+    display: block;
+    padding-right: 5%;
+}
+
+option {
+    color: white;
+    background-color: rgb(34, 25, 25);
+    outline: none;
+}
+
+.images {
+    position: absolute;
+    display: block;
+    height: 90%;
+    width: 40%;
+    left: 0;
+}
+
+.images img {
+    background-repeat: no-repeat;
+    background-image: cover;
+    height: 48%;
+    width: 80%;
+    margin-top: .9%;
+    border-radius: 1vw;
+}
+
+
+#container {
+    height: 91%;
+}
+
+#link-tag {
+    padding-right: 10vw;
+    font-size: 100%;
+}
+
+#info {
+    height: 60%;
+    width: 35%;
+    font-size: 2vw;
+    color: white;
+    display: block;
+    padding-right: 2%;
+    padding-top: 2%;
+    color: white;
+}
+
+#hint {
+    position: absolute;
+    top: 90%;
+    left: 42%;
+}
+
+.about {
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
