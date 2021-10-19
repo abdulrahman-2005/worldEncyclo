@@ -38,7 +38,7 @@ const deviceType = () => {
     else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
         return "mobile";
     } else {
-	document.body.style = "overflow: hidden"
+	document.getElementsByTagName('body')[0].style = 'overflow: hidden';
     }
 };
 
