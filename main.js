@@ -30,18 +30,6 @@ let continents = {
 	antaractica: ["مفيش دول"],
 };
 
-const deviceType = () => {
-    const ua = navigator.userAgent;
-    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-        return "tablet";
-    }
-    else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-        return "mobile";
-    } else {
-	document.getElementsByTagName('body')[0].style = 'overflow: hidden';
-    }
-};
-
 function append() {
 	for (i in countries) {
 		if (countries[i]["continent"] === "افريقيا") {
