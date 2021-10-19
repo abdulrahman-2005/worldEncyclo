@@ -199,7 +199,7 @@ function set() {
 	relegion.innerText = `الديانة \\ المعتقد : ${
 		countries[countriesSelect.value]["relegion"]
 	}`;
-	currency.innerText = `العملة المستعملة : ${
+	currency.innerText = `العملة : ${
 		countries[countriesSelect.value]["currency"]
 	}`;
 	anthemPath = countries[countriesSelect.value]["anthem"];
