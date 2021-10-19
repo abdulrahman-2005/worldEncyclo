@@ -1,0 +1,242 @@
+@font-face {
+    font-family: kufi;
+    src: url("assets/fonts/kufi.ttf")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 115%;
+    font-family: kufi;
+    direction: rtl;
+    overflow: hidden;
+}
+
+body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(34, 25, 25);
+}
+
+header {
+    position: relative;
+    background-color: white;
+    height: 50px;
+    padding-right: 5%;
+}
+
+.hoverable {
+    font-size: .75em;
+    height: 40px;
+    color: rgb(34, 25, 25);
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5vw;
+    margin-top: 5px;
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+.unhoverable {
+    font-size: .75em;
+    height: 40px;
+    color: rgb(34, 25, 25);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 5vw;
+    margin-top: 5px;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.hoverable:hover {
+    color: black;
+    font-weight: bold;
+}
+
+select {
+    height: 27%;
+    width: 70%;
+    font-size: 90%;
+    border-radius: .2vw;
+    cursor: pointer;
+    outline: none;
+    margin-top: 12%;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.select {
+    height: 30%;
+    width: 20%;
+    font-size: 1.4vw;
+    color: white;
+    display: block;
+    padding-right: 5%;
+}
+
+option {
+    color: white;
+    background-color: rgb(34, 25, 25);
+    outline: none;
+}
+
+.images {
+    position: absolute;
+    display: block;
+    height: 90%;
+    width: 40%;
+    left: 0;
+}
+
+.images img {
+    background-repeat: no-repeat;
+    background-image: cover;
+    height: 48%;
+    width: 80%;
+    margin-top: .9%;
+    border-radius: 1vw;
+}
+
+#container {
+    height: 91%;
+}
+
+#link-tag {
+    padding-right: 10vw;
+    font-size: 100%;
+}
+
+#info {
+    height: 60%;
+    width: 35%;
+    font-size: 1.7vw;
+    color: white;
+    display: block;
+    padding-right: 2%;
+    padding-top: 2%;
+    color: white;
+}
+
+#hint {
+    position: absolute;
+    font-size: 1em;
+    top: 87%;
+    left: 42%;
+}
+
+.about {
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
+
+#settings {
+    position: fixed;
+    border-radius: 1vw;
+}
+
+.pop {
+    position: fixed;
+    padding: 10%;
+    background-color: rgb(19, 13, 13);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    border-radius: 1vw;
+    text-align: center;
+    z-index: 1;
+}
+
+/* 
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+} */
+
+.menu-container {
+    height: 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(34, 25, 25);
+    border-radius: 1vw;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-10px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-10px, -8px);
+}
