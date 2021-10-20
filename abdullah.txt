@@ -6,8 +6,44 @@ done = [
 
 
 country = {
-    example: {
-        ename: "example",
+	congo: {
+		ename: "congo",
+		arname: "الكونغو",
+		continent: "افريقيا",
+		capital: "برازفيل",
+		population: "89.56 مليون (2020)",
+		area: "2,345,000 كم²",
+		language: "الفرنسية",
+		relegion: "المسيحية",
+		currency: "فرنك كونغولي",
+		anthem: `${assets}audio/congo.mp3`,
+	},
+	egypt: {
+		ename: "egypt",
+		arname: "مصر",
+		continent: "افريقيا",
+		capital: "القاهرة",
+		population: "102.3 مليون (2020)",
+		area: "1,010,000 كم²",
+		language: "العربية",
+		relegion: "الاسلام",
+		currency: "الجنيه المصري",
+		anthem: `${assets}audio/egypt.mp3`,
+	},
+	algeria: {
+		ename: "algeria",
+		arname: "الجزائر",
+		continent: "افريقيا",
+		capital: "الجزائر العاصمة",
+		population: "43.85 مليون (2020)",
+		area: "2,382,000 كم²",
+		language: "العربية",
+		relegion: "الاسلام",
+		currency: "الدينار الجزائري",
+		anthem: `${assets}audio/algeria.mp3`,
+	},
+	example: {
+        	ename: "example",
 		arname: "الدولة",
 		continent: "القارة",
 		capital: "العاصمة",
@@ -17,5 +53,5 @@ country = {
 		relegion: "الدين\المعتقد",
 		currency: "العملة",
 		anthem: `${assets}audio/example.mp3`,
-    }
+    },
 }
