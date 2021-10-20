@@ -1,0 +1,21 @@
+done = [
+    "egypt"
+    "congo"
+    "algeria"
+]
+
+
+country = {
+    example: {
+        ename: "example",
+		arname: "الدولة",
+		continent: "القارة",
+		capital: "العاصمة",
+		population: "عددالسكان",
+		area: "المساحة",
+		language: "اللغة",
+		relegion: "الدين\المعتقد",
+		currency: "العملة",
+		anthem: `${assets}audio/example.mp3`,
+    }
+}
