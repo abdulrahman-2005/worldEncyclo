@@ -181,4 +181,16 @@ const countries = {
 		currency: "بوليفار فنزويلي",
 		anthem: `${assets}audio/venezuela.mp3`,
 	},
+        tunisia: {
+        	ename: "tunisia",
+		arname: "تونس",
+		continent: "أفريقيا",
+		capital: "تونس",
+		population: "10,102,000 (2020) مليون",
+		area: "163,610 كم² ",
+		language: "العربية",
+		relegion: "الاسلام",
+		currency: "دينار تونسي",
+		anthem: `${assets}audio/tunisia.mp3`,
+    }
 };
