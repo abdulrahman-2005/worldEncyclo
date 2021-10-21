@@ -2,6 +2,60 @@ done = [
     "egypt"
     "congo"
     "algeria"
+    "Tunisia"
+    "Libya"
+    "Angola"
+    "Benin"
+    "Botswana"
+    "Burkina Faso"
+    "Nigeria"
+    "Ethiopia"
+    "Congo"
+    "Tanzania"
+    "South Africa"
+    "Kenya"
+    "Uganda"
+    "Sudan"
+    "Morocco"
+    "Angola"
+    "Mozambique"
+    "Ghana"
+    "Madagascar"
+    "Cameroon"
+    "Ivory Coast"
+    "Niger"
+    "Mali"
+    "Malawi"
+    "Zambia"
+    "Senegal"
+    "Chad"
+    "Somalia"
+    "Zimbabwe"
+    "Guinea"
+    "Rwanda"
+    "Benin"
+    "Burundi"
+    "South Sudan"
+    "Togo"
+    "Sierra Leone"
+    "Liberia"
+    "Central African Republic"
+    "Mauritania"
+    "Eritrea"
+    "Namibia"
+    "Gambia"
+    "Botswana"
+    "Gabon"
+    "Lesotho"
+    "Guinea-Bissau"
+    "Equatorial Guinea"
+    "Mauritius"
+    "Eswatini"
+    "Djibouti"
+    "Comoros"
+    "Cabo Verde"
+    "Sao Tome & Principe"
+    "Seychelles"
 ]
 
 
@@ -42,16 +96,28 @@ country = {
 		currency: "الدينار الجزائري",
 		anthem: `${assets}audio/algeria.mp3`,
 	},
-	example: {
-        	ename: "example",
-		arname: "الدولة",
-		continent: "القارة",
-		capital: "العاصمة",
-		population: "عددالسكان",
-		area: "المساحة",
-		language: "اللغة",
-		relegion: "الدين\المعتقد",
-		currency: "العملة",
-		anthem: `${assets}audio/example.mp3`,
+	tunisia: {
+        	ename: "tunisia",
+		arname: "تونس",
+		continent: "أفريقيا",
+		capital: "تونس",
+		population: "10,102,000 (2020) مليون",
+		area: "163,610 كم² ",
+		language: "العربية",
+		relegion: "الاسلام",
+		currency: "دينار تونسي",
+		anthem: `${assets}audio/Tunisia.mp3`,
+    },
+        tunisia: {
+        	ename: "tunisia",
+		arname: "تونس",
+		continent: "أفريقيا",
+		capital: "تونس",
+		population: "10,102,000 (2020) مليون",
+		area: "163,610 كم² ",
+		language: "العربية",
+		relegion: "الاسلام",
+		currency: "دينار تونسي",
+		anthem: `${assets}audio/Tunisia.mp3`,
     },
 }
