@@ -184,7 +184,7 @@ const countries = {
         tunisia: {
         	ename: "tunisia",
 		arname: "تونس",
-		continent: "أفريقيا",
+		continent: "افريقيا",
 		capital: "تونس",
 		population: "10,102,000 (2020) مليون",
 		area: "163,610 كم² ",
