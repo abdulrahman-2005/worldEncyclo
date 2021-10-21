@@ -2,8 +2,8 @@ done = [
     "egypt"
     "congo"
     "algeria"
-    "Tunisia"
-    "Libya"
+    "tunisia"
+    "libya"
     "Angola"
     "Benin"
     "Botswana"
@@ -106,7 +106,7 @@ country = {
 		language: "العربية",
 		relegion: "الاسلام",
 		currency: "دينار تونسي",
-		anthem: `${assets}audio/Tunisia.mp3`,
+		anthem: `${assets}audio/tunisia.mp3`,
     },
         tunisia: {
         	ename: "tunisia",
