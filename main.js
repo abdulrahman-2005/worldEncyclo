@@ -32,7 +32,7 @@ let continents = {
 
 function append() {
 	for (i in countries) {
-		if (countries[i]["continent"] === "افريقيا" or countries[i]["continent"] === "أفريقيا") {
+		if (countries[i]["continent"] === "افريقيا") {
 			continents["africa"].push(countries[i]);
 		} else if (countries[i]["continent"] === "اسيا") {
 			continents["asia"].push(countries[i]);
