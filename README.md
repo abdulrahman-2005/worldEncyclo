@@ -1,7 +1,6 @@
 # world encyclopedia project
 
-It is a project about world and about saving time
-it is a great way to see hear and interact
+i don.t actually know how to make a readme file so i'm sorry
 
-# whoaa
-cool
+# this is a website
+this website is a school project, it is about world and countries and informations about it.   actually it must be done with php but i'm sick
