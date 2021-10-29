@@ -150,8 +150,8 @@ function run() {
 	}
 }
 
-countriesSelect.addEventListener("change", set && pauseAnthem && set);
-continentsSelect.addEventListener("change", setContinent && set);
+countriesSelect.addEventListener("change", set && pauseAnthem);
+continentsSelect.addEventListener("change", setContinent);
 
 let continentText;
 function setContinent() {
