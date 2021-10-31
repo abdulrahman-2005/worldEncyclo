@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="title">مشروع الموسوعة الجغرافية</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    
-    <header>
+
+    <div class="header" id="header">
         <div class="menu-container" onclick="menuToggle(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -20,7 +21,7 @@
         <button class="unhoverable">الموسوعة الجغرافية</button>
         <a href="/aboutproject.html"><button class="hoverable">عن المشروع</button></a>
         <a href="/aboutcreator.html"><button class="hoverable">عن المصمم</button></a>
-    </header>
+    </div>
 
     <div id="container">
         <div id="settings-menu"></div>
@@ -44,7 +45,7 @@
                 <option value="oceania">الاوقيانوسية</option>
             </select>
             اختر دولة
-            <select name="country" id="country" onclick="set()">
+            <select name="country" id="country">
                 <option value="">اختر دولة</option>
             </select>
         </div>
@@ -63,6 +64,7 @@
 
     <script src="countries.js"></script>
     <script src="main.js"></script>
+    <script src="modes.js"></script>
 </body>
 
 </html>

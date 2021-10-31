@@ -19,9 +19,10 @@ body {
     overflow: hidden;
 }
 
-header {
+.header {
     position: relative;
     background-color: white;
+    color: red;
     height: 50px;
     padding-right: 5%;
 }
