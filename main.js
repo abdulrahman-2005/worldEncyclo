@@ -42,7 +42,7 @@ function append() {
 			continents["southAmirca"].push(countries[i]);
 		} else if (countries[i]["continent"] === "الاوقيانوسية") {
 			continents["oceania"].push(countries[i]);
-		} else if (countries[i]["continent"] === "اوروبا") {
+		} else if (countries[i]["continent"] === "اوروبا" || countries[i]["continent"] === "اوربا") {
 			continents["europe"].push(countries[i]);
 		}
 	}
