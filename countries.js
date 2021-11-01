@@ -255,7 +255,7 @@ const countries = {
 	},
 	belgium: {
 		ename: "belgium",
-		arname: "arname",
+		arname: "بلجيكا",
 		continent: "اوربا",
 		capital: "بروكسيل",
 		population: "11,259,000",
@@ -267,7 +267,7 @@ const countries = {
 	},
 	bulgaria: {
 		ename: "bulgaria",
-		arname: "arname",
+		arname: "بلغاريا",
 		continent: "اوربا",
 		capital: "صوفيا",
 		population: "7,185,000",
