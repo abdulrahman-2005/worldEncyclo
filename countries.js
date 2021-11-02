@@ -247,7 +247,7 @@ const countries = {
 		continent: "اوربا",
 		capital: "فيينا",
 		population: "8,608,000",
-		area: "area",
+		area: "83,858",
 		language: "الألمانية",
 		relegion: "المسيحية",
 		currency: "يورو",
