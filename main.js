@@ -176,7 +176,7 @@ function set() {
 	map.style.height = "48%";
 	y = 1;
 
-	mapPath = `${assets}maps/${countriesSelect.value}.jpg`;
+	mapPath = `${assets}maps/${countriesSelect.value}.jpg` || `${assets}maps/${countriesSelect.value}.jpg`;
 	flagPath = `${assets}flags/${countriesSelect.value}.svg`;
 
 	flag.src = flagPath;
