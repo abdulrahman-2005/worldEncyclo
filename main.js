@@ -259,7 +259,12 @@ function menuToggle(x) {
 	} else {
 		settings.className = "pop"
 		settings.innerHTML = `<h1 style="margin-top: 10%;">لم يتم اضافة الاعدادات</h1>
-        <h1>...</h1>`
+		<h1>...</h1>`
 		z = 1
+		
 	}
+}
+
+if (settings.classList.contains("pop")) {
+	document.body.addEventListener("click", menuToggle)
 }
