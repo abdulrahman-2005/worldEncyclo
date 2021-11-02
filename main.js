@@ -265,6 +265,4 @@ function menuToggle(x) {
 	}
 }
 
-if (settings.classList.contains("pop")) {
-	document.body.addEventListener("click", menuToggle)
-}
+
