@@ -237,10 +237,12 @@ map.onclick = function resize() {
 	if (y === 1) {
 		map.style.width = "98%";
 		map.style.height = "100%";
+		map.style.cursor = "zoom-out"
 		y = 0;
 	} else {
 		map.style.width = "80%";
 		map.style.height = "48%";
+		map.style.cursor = "zoom-in"
 		y = 1;
 	}
 };

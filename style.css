@@ -97,6 +97,7 @@ option {
 .images img {
     background-repeat: no-repeat;
     background-image: cover;
+    cursor: zoom-in;
     height: 48%;
     width: 80%;
     margin-top: .9%;
