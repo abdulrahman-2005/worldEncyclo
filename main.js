@@ -11,7 +11,7 @@ let flag = document.getElementById("flag-box");
 let nationalAnthemEl = document.getElementById("anthem");
 let audioStatus = document.getElementById("status");
 let title = document.getElementById("title");
-let settings = document.getElementById("settings-menu")
+let settings = document.getElementById("settings-menu");
 
 let mapPath = "assets/maps/world.jpg";
 let flagpath = "assets/flags/world.svg";
@@ -32,7 +32,10 @@ let continents = {
 
 function append() {
 	for (i in countries) {
-		if (countries[i]["continent"] === "افريقيا" || countries[i]["continent"] === "أفريقيا") {
+		if (
+			countries[i]["continent"] === "افريقيا" ||
+			countries[i]["continent"] === "أفريقيا"
+		) {
 			continents["africa"].push(countries[i]);
 		} else if (countries[i]["continent"] === "اسيا") {
 			continents["asia"].push(countries[i]);
@@ -42,7 +45,10 @@ function append() {
 			continents["southAmirca"].push(countries[i]);
 		} else if (countries[i]["continent"] === "الاوقيانوسية") {
 			continents["oceania"].push(countries[i]);
-		} else if (countries[i]["continent"] === "اوروبا" || countries[i]["continent"] === "اوربا") {
+		} else if (
+			countries[i]["continent"] === "اوروبا" ||
+			countries[i]["continent"] === "اوربا"
+		) {
 			continents["europe"].push(countries[i]);
 		}
 	}
@@ -176,7 +182,9 @@ function set() {
 	map.style.height = "48%";
 	y = 1;
 
-	mapPath = `${assets}maps/${countriesSelect.value}.jpg` || `${assets}maps/${countriesSelect.value}.jpg`;
+	mapPath =
+		`${assets}maps/${countriesSelect.value}.jpg` ||
+		`${assets}maps/${countriesSelect.value}.jpg`;
 	flagPath = `${assets}flags/${countriesSelect.value}.svg`;
 
 	flag.src = flagPath;
@@ -237,12 +245,12 @@ map.onclick = function resize() {
 	if (y === 1) {
 		map.style.width = "98%";
 		map.style.height = "100%";
-		map.style.cursor = "zoom-out"
+		map.style.cursor = "zoom-out";
 		y = 0;
 	} else {
 		map.style.width = "80%";
 		map.style.height = "48%";
-		map.style.cursor = "zoom-in"
+		map.style.cursor = "zoom-in";
 		y = 1;
 	}
 };
@@ -251,20 +259,17 @@ audioStatus.onclick = function () {
 	runPause();
 };
 
-let z = 0
+let z = 0;
 function menuToggle(x) {
 	x.classList.toggle("change");
 	if (z === 1) {
-		settings.className = ""
-		settings.innerHTML = ""
-		z = 0
+		settings.className = "";
+		settings.innerHTML = "";
+		z = 0;
 	} else {
-		settings.className = "pop"
+		settings.className = "pop";
 		settings.innerHTML = `<h1 style="margin-top: 10%;">لم يتم اضافة الاعدادات</h1>
-		<h1>...</h1>`
-		z = 1
-		
+		<h1>...</h1>`;
+		z = 1;
 	}
 }
-
-
