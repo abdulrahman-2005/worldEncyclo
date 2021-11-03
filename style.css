@@ -64,14 +64,24 @@ select {
 	height: 27%;
 	width: 70%;
 	font-size: 90%;
-	border-radius: 0.9vw;
+    border-radius: 10vw;
+
 	cursor: pointer;
 	outline: none;
 	margin-top: 12%;
 	padding-right: 2%;
 	padding-left: 2%;
+    transition: 1s;
 }
-
+.select select:active,
+.select select:hover {
+    padding-right: 10%;
+	background-color: rgb(34, 25, 25);
+    border-radius: none;
+    border-bottom-left-radius: 2vw;
+	border-bottom-right-radius: 2vw;
+    border: 2px solid black;
+}
 .select {
 	height: 30%;
 	width: 25%;
@@ -83,6 +93,29 @@ select {
 .select select {
 	border: none;
 	background-color: rgb(134, 134, 134);
+}
+
+select::-webkit-scrollbar {
+	width: 2vw;
+}
+
+/* Track */
+select::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+/* Handle */
+select::-webkit-scrollbar-thumb {
+	background: #888;
+    border: 4px solid rgb(34, 25, 25);
+    border-radius: 10vw;
+}
+
+/* Handle on hover */
+select::-webkit-scrollbar-thumb:hover {
+	background: rgb(34, 25, 25);
+    border: 4px solid transparent;
+
 }
 
 option {
