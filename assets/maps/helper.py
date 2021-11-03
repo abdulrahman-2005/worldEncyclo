@@ -11,14 +11,16 @@ def main():
         # os.rename(f"assets\\maps\\mapss\\{filename}", new)
         if filename.endswith("py"):
             continue
+        if filename.endswith(".jpg"):
+            continue
         filename = list(filename)
         filename.pop()
         filename.pop()
         filename.pop()
         filename.pop()
-        print(filename)
         im = Image.open(f"{filename}.gif")
         rgb_im = im.convert("RGB")
         rgb_im.save(f"{filename}.jpg")
-
+        print("renamed: ", filename)
+        
 main()

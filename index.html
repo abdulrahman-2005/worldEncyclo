@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this app made for getting base informnations about all countries">
+    <meta name="description" content="if you want to get some data like language, area, relegion, population or listen to their music">
+    <meta name="description" content="you are in the right place, just one click seperates you from worldencyclopedia.tk">
+    <meta name="author" content="Abdulrahman Azmy Kamel">
+    <meta name="keywords" content="world, worldencyclopedia, people, countries, vision, music">
+    <meta name="keywords" content="about world, earth, countries, data, resources, informations">
     <title id="title">مشروع الموسوعة الجغرافية</title>
     <link rel="stylesheet" href="style.css">
 
@@ -26,9 +32,9 @@
     <div id="container">
         <div id="settings-menu"></div>
         <div class="images">
-            <img class="map" id="map-box" src="assets/maps/world.png"></img>
-            <img class="flag" id="flag-box" style="cursor: pointer;" onclick="runPause()"
-                src="assets/flags/world.svg"></img>
+            <img class="map" id="map-box" src="assets/maps/world.png" alt="map place where maps will be shown"></img>
+            <img class="flag" id="flag-box" style="cursor: url('./assets/fonts/curcur.cur'), url(./assets/fonts/curpng.png), auto;" onclick="runPause()"
+                src="assets/flags/world.svg" alt="flag box where countries flags will be placed"></img>
             <font id="status" color="black"
                 style="position: fixed; top: 15px; font-family: Arial, Helvetica, sans-serif; font-size: 1rem; cursor: pointer;">
             </font>
@@ -64,7 +70,6 @@
 
     <script src="countries.js"></script>
     <script src="main.js"></script>
-    <script src="modes.js"></script>
 </body>
 
 </html>
