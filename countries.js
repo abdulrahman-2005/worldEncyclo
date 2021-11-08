@@ -1,5 +1,50 @@
 const assets = "assets/";
 
+const conts = {
+	africa: {
+		countries: " 54 دولة",
+		population: "1.216 مليار (2016)",
+		bigCountry: "الجزائر ",
+		bigCapital: "لاغوس - نيجيريا",
+		area: "30,370,000 كم²",
+	},
+	asia: {
+		countries: "52 دولة",
+		population: "4.561 مليار (2018)",
+		bigCountry: "روسيا",
+		bigCapital: "طوكيو - اليابان",
+		area: "43,820,000 كم"
+	},
+	northAamirca: {
+		countries: "23 دولة",
+		population: "579 مليون (2016)",
+		bigCountry: "كندا - 9،984،680 كم",
+		bigCapital: "مكسيكو سيتي - المكسيك",
+		area: "24,490,000 كم"
+	},
+	southAmirca: {
+		countries: "12 دولة",
+		population: "422.5 مليون (2016)",
+		bigCountry: "البرازيل",
+		bigCapital: "ساوباولو - البرازيل",
+		area: "17,840,000 كم"
+	},
+	europe: {
+		countries: "43 دولة",
+		population: "746.4 مليون (2018)",
+		bigCountry: "روسيا",
+		bigCapital: "لندن - بريطانيا",
+		area: "10,180,000 كم"
+	},
+	oceania: {
+		countries: "14 دولة",
+		population: "22 مليون",
+		bigCountry: "استراليا",
+		bigCapital: "سيدني - أستراليا",
+		area: "9,008,500 كم"
+	}
+};
+
 const countries = {
 	china: {
 		ename: "china",
@@ -25,11 +70,11 @@ const countries = {
 		currency: "الجنيه المصري",
 		anthem: `${assets}audio/egypt.mp3`,
 	},
-	congo: {
-		ename: "congo",
-		arname: "الكونغو",
+	zair: {
+		ename: "zair",
+		arname: "زائير",
 		continent: "افريقيا",
-		capital: "برازفيل",
+		capital: "كينشاسا",
 		population: "89.56 مليون (2020)",
 		area: "2,345,000 كم²",
 		language: "الفرنسية",

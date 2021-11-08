@@ -1,4 +1,3 @@
-
 let continentsSelect = document.getElementById("continent");
 let countriesSelect = document.getElementById("country");
 let capital = document.getElementById("capital");
@@ -8,7 +7,7 @@ let language = document.getElementById("language");
 let relegion = document.getElementById("relegion");
 let currency = document.getElementById("currency");
 let wiki = document.getElementById("wiki");
-let wikiLink = document.getElementById("wiki-link")
+let wikiLink = document.getElementById("wiki-link");
 let map = document.getElementById("map-box");
 let flag = document.getElementById("flag-box");
 let nationalAnthemEl = document.getElementById("anthem");
@@ -18,6 +17,9 @@ let settings = document.getElementById("settings-menu");
 let mapPath = "assets/maps/world.jpg";
 let flagpath = "assets/flags/world.svg";
 let anthem;
+let info = document.getElementById("info");
+
+let contOverView;
 
 let y = 1; // to resize the map
 
@@ -61,46 +63,34 @@ append();
 
 function check() {
 	selection = countries[countriesSelect.value];
-	if (
-		selection["capital"] === undefined ||
-		selection["capital"] === ""
-	) {
+	if (selection["capital"] === undefined || selection["capital"] === "") {
 		selection["capital"] = "لا توجد معلومات";
-	}if (
-		selection["area"] === undefined ||
-		selection["area"] === ""
-	) {
+	}
+	if (selection["area"] === undefined || selection["area"] === "") {
 		selection["area"] = "لا توجد معلومات";
-	}if (
+	}
+	if (
 		selection["population"] === undefined ||
 		selection["population"] === ""
 	) {
 		selection["population"] = "لا توجد معلومات";
-	}if (
-		selection["language"] === undefined ||
-		selection["language"] === ""
-	) {
+	}
+	if (selection["language"] === undefined || selection["language"] === "") {
 		selection["language"] = "لا توجد معلومات";
-	}if (
-		selection["relegion"] === undefined ||
-		selection["relegion"] === ""
-	) {
+	}
+	if (selection["relegion"] === undefined || selection["relegion"] === "") {
 		selection["relegion"] = "لا توجد معلومات";
-	}if (
-		selection["currency"] === undefined ||
-		selection["currency"] === ""
-	) {
+	}
+	if (selection["currency"] === undefined || selection["currency"] === "") {
 		selection["currency"] = "لا توجد معلومات";
-	}if (
-		selection["wiki"] === undefined ||
-		selection["wiki"] === ""
-	) {
+	}
+	if (selection["wiki"] === undefined || selection["wiki"] === "") {
 		selection["wiki"] = "لا توجد معلومات";
 	}
 }
 
 function run() {
-	countriesSelect.innerHTML = '<option value="choose">اختر دولة</option>';
+	countriesSelect.innerHTML = "<option >اختر دولة</option>";
 
 	con = continentsSelect.value;
 	for (i in continents[con]) {
@@ -127,11 +117,18 @@ function setContinent() {
 	} else if (continentsSelect.value === "oceania") {
 		continentText = "الاوقيانوسية";
 	}
-	wiki.className = "wiki"
-	wiki.innerText = `${continentText} على ويكيبيديا`
-	wikiLink.className = "a"
-	wikiLink.href = `https://ar.wikipedia.org/wiki/قارة ${continentText}`
-	map.src = `./assets/maps/${continentsSelect.value}.jpg`
+
+	let n = conts[continentsSelect.value];
+	capital.innerText = `عدد الدول: ${n["countries"]}`;
+	area.innerText = `عدد السكان: ${n["population"]} `;
+	population.innerText = `اكبر الدول: ${n["bigCountry"]}`;
+	language.innerText = `اكبر المدن: ${n["bigCapital"]} `;
+	relegion.innerText = `المساحة الكلية: ${n["area"]}`;
+	wiki.className = "wiki";
+	wiki.innerText = `${continentText} على ويكيبيديا`;
+	wikiLink.className = "a";
+	wikiLink.href = `https://ar.wikipedia.org/wiki/قارة ${continentText}`;
+	map.src = `./assets/maps/${continentsSelect.value}.jpg`;
 	title.innerText = `${continentText} - الموسوعة الجغرافية`;
 }
 
@@ -140,9 +137,7 @@ function set() {
 	map.style.height = "48%";
 	y = 1;
 
-	mapPath =
-		`${assets}maps/${countriesSelect.value}.jpg` ||
-		`${assets}maps/${countriesSelect.value}.jpg`;
+	mapPath = `${assets}maps/${countriesSelect.value}.jpg`;
 	flagPath = `${assets}flags/${countriesSelect.value}.svg`;
 	flag.src = flagPath;
 	map.src = mapPath;
@@ -167,10 +162,12 @@ function set() {
 	currency.innerText = `العملة : ${
 		countries[countriesSelect.value]["currency"]
 	}`;
-	wiki.className = "wiki"
-	wiki.innerText = "المزيد على ويكيبيديا"
-	wikiLink.className = "a"
-	wikiLink.href = `https://ar.wikipedia.org/wiki/${countries[countriesSelect.value]["arname"]}`
+	wiki.className = "wiki";
+	wiki.innerText = "المزيد على ويكيبيديا";
+	wikiLink.className = "a";
+	wikiLink.href = `https://ar.wikipedia.org/wiki/${
+		countries[countriesSelect.value]["arname"]
+	}`;
 	anthemPath = countries[countriesSelect.value]["anthem"];
 	nationalAnthemEl.src = anthemPath;
 	nationalAnthemEl.currentTime = 13;
