@@ -90,7 +90,7 @@ function check() {
 }
 
 function run() {
-	countriesSelect.innerHTML = "<option >اختر دولة</option>";
+	countriesSelect.innerHTML = "<option value='world'>اختر دولة</option>";
 
 	con = continentsSelect.value;
 	for (i in continents[con]) {
@@ -130,6 +130,7 @@ function setContinent() {
 	wikiLink.href = `https://ar.wikipedia.org/wiki/قارة ${continentText}`;
 	map.src = `./assets/maps/${continentsSelect.value}.jpg`;
 	title.innerText = `${continentText} - الموسوعة الجغرافية`;
+	flag.src = `${assets}flags/world.svg`;
 }
 
 function set() {

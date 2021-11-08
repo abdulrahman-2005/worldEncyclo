@@ -33,7 +33,7 @@
     <div id="container">
         <div id="settings-menu"></div>
         <div class="images">
-            <img class="map" id="map-box" src="assets/maps/world.png" alt="map place where maps will be shown"></img>
+            <img class="map" id="map-box" src="assets/maps/world.jpg" alt="map place where maps will be shown"></img>
             <img class="flag" id="flag-box"
                 style="cursor: url('./assets/fonts/curcur.cur'), url(./assets/fonts/curpng.png), auto;"
                 src="assets/flags/world.svg" alt="flag box where countries flags will be placed"></img>
@@ -44,7 +44,7 @@
         <div class="select">
             اختر قارة
             <select onclick="run()" name="continent" id="continent">
-                <option >اختر قارة</option>
+                <option value="world">اختر قارة</option>
                 <option value="africa">افريقيا</option>
                 <option value="asia">اسيا</option>
                 <option value="europe">اوربا</option>
@@ -54,7 +54,7 @@
             </select>
             اختر دولة
             <select name="country" id="country">
-                <option >اختر دولة</option>
+                <option value="world">اختر دولة</option>
             </select>
         </div>
         <div id="info">
