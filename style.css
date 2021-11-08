@@ -298,7 +298,7 @@ input:checked+.slider:before {
 	padding-right: 5%;
 	border-radius: .5vw;
 	color: silver;
-	transition: .333s;
+	transition: .6s;
 }
 
 .wiki:hover {
