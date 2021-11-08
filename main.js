@@ -127,6 +127,10 @@ function setContinent() {
 	} else if (continentsSelect.value === "oceania") {
 		continentText = "الاوقيانوسية";
 	}
+	wiki.className = "wiki"
+	wiki.innerText = `${continentText} على ويكيبيديا`
+	wikiLink.className = "a"
+	wikiLink.href = `https://ar.wikipedia.org/wiki/قارة ${continentText}`
 	map.src = `./assets/maps/${continentsSelect.value}.jpg`
 	title.innerText = `${continentText} - الموسوعة الجغرافية`;
 }
