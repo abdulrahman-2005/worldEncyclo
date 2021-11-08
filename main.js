@@ -1,3 +1,4 @@
+
 let continentsSelect = document.getElementById("continent");
 let countriesSelect = document.getElementById("country");
 let capital = document.getElementById("capital");
@@ -6,6 +7,8 @@ let population = document.getElementById("population");
 let language = document.getElementById("language");
 let relegion = document.getElementById("relegion");
 let currency = document.getElementById("currency");
+let wiki = document.getElementById("wiki");
+let wikiLink = document.getElementById("wiki-link")
 let map = document.getElementById("map-box");
 let flag = document.getElementById("flag-box");
 let nationalAnthemEl = document.getElementById("anthem");
@@ -58,41 +61,41 @@ append();
 
 function check() {
 	selection = countries[countriesSelect.value];
-	if (selection["capital"] === undefined) {
+	if (
+		selection["capital"] === undefined ||
+		selection["capital"] === ""
+	) {
 		selection["capital"] = "لا توجد معلومات";
-	}
-	if (selection["area"] === undefined) {
+	}if (
+		selection["area"] === undefined ||
+		selection["area"] === ""
+	) {
 		selection["area"] = "لا توجد معلومات";
-	}
-	if (selection["population"] === undefined) {
+	}if (
+		selection["population"] === undefined ||
+		selection["population"] === ""
+	) {
 		selection["population"] = "لا توجد معلومات";
-	}
-	if (selection["language"] === undefined) {
+	}if (
+		selection["language"] === undefined ||
+		selection["language"] === ""
+	) {
 		selection["language"] = "لا توجد معلومات";
-	}
-	if (selection["relegion"] === undefined) {
+	}if (
+		selection["relegion"] === undefined ||
+		selection["relegion"] === ""
+	) {
 		selection["relegion"] = "لا توجد معلومات";
-	}
-	if (selection["currency"] === undefined) {
+	}if (
+		selection["currency"] === undefined ||
+		selection["currency"] === ""
+	) {
 		selection["currency"] = "لا توجد معلومات";
-	}
-	if (selection["capital"] === "") {
-		selection["capital"] = "لا توجد معلومات";
-	}
-	if (selection["importantPort"] === "") {
-		selection["importantPort"] = "لا توجد معلومات";
-	}
-	if (selection["population"] === "") {
-		selection["population"] = "لا توجد معلومات";
-	}
-	if (selection["language"] === "") {
-		selection["language"] = "لا توجد معلومات";
-	}
-	if (selection["relegion"] === "") {
-		selection["relegion"] = "لا توجد معلومات";
-	}
-	if (selection["currency"] === "") {
-		selection["currency"] = "لا توجد معلومات";
+	}if (
+		selection["wiki"] === undefined ||
+		selection["wiki"] === ""
+	) {
+		selection["wiki"] = "لا توجد معلومات";
 	}
 }
 
@@ -124,6 +127,7 @@ function setContinent() {
 	} else if (continentsSelect.value === "oceania") {
 		continentText = "الاوقيانوسية";
 	}
+	map.src = `./assets/maps/${continentsSelect.value}.jpg`
 	title.innerText = `${continentText} - الموسوعة الجغرافية`;
 }
 
@@ -159,6 +163,10 @@ function set() {
 	currency.innerText = `العملة : ${
 		countries[countriesSelect.value]["currency"]
 	}`;
+	wiki.className = "wiki"
+	wiki.innerText = "المزيد على ويكيبيديا"
+	wikiLink.className = "a"
+	wikiLink.href = `https://ar.wikipedia.org/wiki/${countries[countriesSelect.value]["arname"]}`
 	anthemPath = countries[countriesSelect.value]["anthem"];
 	nationalAnthemEl.src = anthemPath;
 	nationalAnthemEl.currentTime = 13;
@@ -168,7 +176,6 @@ function set() {
 		countries[countriesSelect.value]["arname"]
 	} - الموسوعة الجغرافية`;
 }
-
 
 function playAnthem() {
 	audioStatus.textContent = "playing";
@@ -192,7 +199,7 @@ function runPause() {
 	}
 }
 
-flag.addEventListener("click", runPause)
+flag.addEventListener("click", runPause);
 
 map.onclick = function resize() {
 	if (y === 1) {

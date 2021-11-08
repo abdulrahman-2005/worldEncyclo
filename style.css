@@ -287,3 +287,23 @@ input:checked+.slider:before {
 	-webkit-transform: rotate(45deg) translate(-8px, -8px);
 	transform: rotate(45deg) translate(-10px, -8px);
 }
+
+.a {
+	text-decoration: none;
+	font-size: 1.5vw;
+}
+
+.wiki {
+	border: 3px solid silver;
+	padding-right: 5%;
+	border-radius: .5vw;
+	color: silver;
+	transition: .333s;
+}
+
+.wiki:hover {
+	border-radius: 12vw;
+	padding-right: 10%;
+	background-color: rgb(134, 134, 134);
+	color: rgb(34, 25, 25);
+}
