@@ -1,16 +1,13 @@
-@font-face {
-	font-family: kufi;
-	src: url("assets/fonts/kufi.ttf");
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300&display=swap');
 * {
 	margin: 0;
 	padding: 0;
 	font-size: 115%;
-	font-family: kufi;
+	font-family: 'Noto Kufi Arabic', sans-serif;
 	direction: rtl;
 	color: white;
 }
+
 
 body {
 	position: absolute;
