@@ -133,8 +133,8 @@ details ul {
 }
 
 .images img {
-	height: 9vw;
-	width: 14vw;
+	height: 13vw;
+	width: 20vw;
 	margin: 1vw;
 	border-radius: 15px;
 }
@@ -159,25 +159,15 @@ article {
 		display: grid;
 		grid-template-columns: auto auto auto;
 		grid-template-rows: auto auto;
-		gap: 0.5vw;
+		gap: 1vw;
 	}
 
 	#info * {
 		padding: 1vw;
 	}
 
-	.zoomIt {
-		z-index: 1000 !important;
-		height: 100vh !important;
-		width: 100vw !important;
-		background-color: white !important;
-		padding: 20vw;
-	}
-
-	.zoomIt img {
-		height: 90vh !important;
-		width: 100vw !important;
-		border: 10px solid black;
-		padding: 0 !important;
+	.images img {
+		height: 20vw;
+		width: 30vw;
 	}
 }
