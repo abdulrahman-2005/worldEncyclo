@@ -61,7 +61,6 @@ function pickCountry(country) {
 	<p>${country["currency"]}</p>
 	</article>
 	`;
-	zoomContainer.innerHTML = `<img src="assets/flags/${country["ename"]}.svg" alt="">`;
 	document.getElementsByTagName(
 		"title"
 	).innerHTML = `الموسوعة الجغرافية - ${country["arname"]}`;
