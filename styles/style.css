@@ -150,6 +150,11 @@ article {
 }
 
 @media screen and (max-width: 600px) {
+	
+	:root {
+		--header-height: 100px;
+	}
+	
 	#container {
 		display: flex;
 		flex-direction: column;
@@ -169,5 +174,9 @@ article {
 	.images img {
 		height: 20vw;
 		width: 30vw;
+	}
+	
+	nav * {
+		font-size: 3vw;
 	}
 }
