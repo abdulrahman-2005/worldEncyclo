@@ -2,6 +2,7 @@ const assets = "assets/";
 
 const conts = {
 	africa: {
+        arname: "أفريقيا",
 		countries: " 54 دولة",
 		population: "1.216 مليار (2016)",
 		bigCountry: "الجزائر ",
@@ -9,13 +10,15 @@ const conts = {
 		area: "30,370,000 كم²",
 	},
 	asia: {
+        arname: "آسيا",
 		countries: "52 دولة",
 		population: "4.561 مليار (2018)",
 		bigCountry: "روسيا",
 		bigCapital: "طوكيو - اليابان",
 		area: "43,820,000 كم"
 	},
-	northAamirca: {
+	northAmirca: {
+        arname: "امريكا الشمالية",
 		countries: "23 دولة",
 		population: "579 مليون (2016)",
 		bigCountry: "كندا - 9،984،680 كم",
@@ -23,6 +26,7 @@ const conts = {
 		area: "24,490,000 كم"
 	},
 	southAmirca: {
+        arname: "امريكا الجنوبية",
 		countries: "12 دولة",
 		population: "422.5 مليون (2016)",
 		bigCountry: "البرازيل",
@@ -30,6 +34,7 @@ const conts = {
 		area: "17,840,000 كم"
 	},
 	europe: {
+        arname: "أوروبا",
 		countries: "43 دولة",
 		population: "746.4 مليون (2018)",
 		bigCountry: "روسيا",
@@ -37,6 +42,7 @@ const conts = {
 		area: "10,180,000 كم"
 	},
 	oceania: {
+        arname: "الاوقيانوسيا",
 		countries: "14 دولة",
 		population: "22 مليون",
 		bigCountry: "استراليا",

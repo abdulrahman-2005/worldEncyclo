@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -31,21 +31,8 @@
     </nav>
     <div id="container">
         <div class="select">
-            <details role="list" id="contSelect">
-                <summary aria-haspopup="listbox">اختر قارة</summary>
-                <ul role="listbox">
-                    <li><button onclick="pickContinent('africa')">أفريقيا</button></li>
-                    <li><button onclick="pickContinent('asia')">اسيا</button></li>
-                    <li><button onclick="pickContinent('europe')">اوروبا</button></li>
-                    <li><button onclick="pickContinent('northAmirca')">امريكا الشمالية</button></li>
-                    <li><button onclick="pickContinent('southAmirca')">امريكا الجنوبية</button></li>
-                    <li><button onclick="pickContinent('oceania')">الاوقيانوسية</button></li>
-                </ul>
-            </details>
-            <details role="list">
-                <summary aria-haspopup="listbox">اختر دولة</summary>
-                <ul role="listbox" id="country-list"></ul>
-            </details>
+            <button id="continent-pick-button" class="contrast outline" onClick="toggleModal('continent-picker')">اختر قارة</button>
+            <button id="country-pick-button" class="contrast outline" onClick="toggleModal('country-picker')">اختر دولة</button>
         </div>
         <div id="info" class="grid"></div>
         <div class="images">
@@ -62,8 +49,22 @@
 
         </div>
     </div>
+    <dialog class="picker" id="continent-picker">
+        <li id="continent-picker-list">
+            <button onclick="pickContinent('africa')">أفريقيا</button>
+            <button onclick="pickContinent('asia')">اسيا</button>
+            <button onclick="pickContinent('europe')">اوروبا</button>
+            <button onclick="pickContinent('northAmirca')">امريكا الشمالية</button>
+            <button onclick="pickContinent('southAmirca')">امريكا الجنوبية</button>
+            <button onclick="pickContinent('oceania')">الاوقيانوسية</button>
+        </li>
+    </dialog>
+    <dialog class="picker" id="country-picker">
+        <li id="country-list"></li>
+    </dialog>
     <audio src="" id="AnthemPlayer"></audio>
     <script src="JS/countries.js"></script>
+    <script src="JS/modal.js"></script>
     <script src="JS/main.js"></script>
 </body>
 

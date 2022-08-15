@@ -2,6 +2,11 @@
 
 :root {
 	--header-height: 70px;
+	--primary: #220953 !important;
+	--primary-hover: #4000c0 !important;
+	--primary-focus: #8244ff !important;
+	--primary-inverse: #ffffff !important;
+
 }
 
 *,
@@ -19,6 +24,11 @@ p {
 	margin: 0;
 }
 
+.flexy-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 body {
 	overflow: hidden;
 }
@@ -45,6 +55,7 @@ nav {
 	justify-content: center;
 	align-items: center;
 	padding: 1vw;
+	padding-top: 3vw;
 	gap: 1vw;
 }
 
@@ -61,24 +72,7 @@ nav {
 	gap: 1vw;
 }
 
-.select details {
-	width: 50vw;
-}
 
-details summary {
-	font-size: calc(1vw + 1vh);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-details button {
-	margin: 1px;
-}
-
-details ul {
-	overflow-y: auto;
-}
 
 #info {
 	width: 100vw;
@@ -116,6 +110,24 @@ details ul {
 	justify-content: center;
 	align-items: center;
 	border-radius: 5vw;
+	padding: .4vw
+
+}
+
+.info-article-continent {
+	border-radius: 5vw;
+	background-image: radial-gradient( circle 860px at 11.8% 33.5%,  rgba(240,30,92,1) 0%, rgba(244,49,74,1) 30.5%, rgba(249,75,37,1) 56.1%, rgba(250,88,19,1) 75.6%, rgba(253,102,2,1) 100.2% );
+
+}
+
+.title-continent {
+	user-select: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5vw;
+	background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+	padding: .4vw;
 }
 
 .images {
@@ -145,14 +157,51 @@ details ul {
 	text-align: center;
 }
 
-article {
+article, h1 {
 	margin: 0;
+}
+
+.picker li {
+	overflow: hidden;
+	overflow-y: auto;
+	width: 90vw;
+	height: 100vh;
+	direction: ltr;
+	padding: 3vw;
+}
+
+.picker li::-webkit-scrollbar {
+	width: 30px;
+}
+
+.picker li::-webkit-scrollbar-track {
+	background-color: rgb(45, 0, 91);
+}
+
+.picker li::-webkit-scrollbar-thumb {
+	background-color: rgb(0, 136, 255);
 }
 
 @media screen and (max-width: 600px) {
 	
 	:root {
 		--header-height: 100px;
+	}
+
+	.select {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.select details {
+		width: 90%;
+	}
+
+	.select details summary {
+		
+		font-size: 6vw;
 	}
 	
 	#container {

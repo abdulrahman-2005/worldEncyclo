@@ -1,31 +1,57 @@
-let mapContainer = document.getElementById("map-box");
-let flagContainer = document.getElementById("flag-box");
+const mapContainer = document.getElementById("map-box");
+const flagContainer = document.getElementById("flag-box");
 const infoContainer = document.getElementById("info");
+const info = document.getElementById("info");
+const countryList = document.getElementById("country-list");
+const countryPickButton = document.getElementById("country-pick-button");
+const continentPickButton = document.getElementById("continent-pick-button");
 
-let info = document.getElementById("info");
-
-const zoomContainer = document.getElementById("full");
-
-let mapPath;
-let flagpath;
-let anthem;
-let anthemPath;
-
-let countryList = document.getElementById("country-list");
 
 let currentContinent;
-
 let firstTime = true;
 
 function pickContinent(continent) {
+	countryList.innerHTML = "";
+	continentPickButton.innerHTML = conts[continent].arname
+	countryPickButton.innerHTML = "اختر دولة";
 	for (let i = 0; i < COUNTRIES[continent].length; i++) {
 		country = COUNTRIES[continent][i];
-		countryList.innerHTML += `<li><button onclick="pickCountry(${i})">${country["arname"]}</button></li>`;
+		countryList.innerHTML += `<button onclick="pickCountry(${i})">${country["arname"]}</button>`;
 	}
 	currentContinent = continent;
+	
+	let pickedContinent = conts[continent];
+	info.innerHTML = `
+	<article class="info-article-continent">
+	<p class="title-continent">عدد الدول</p>
+	<p>${pickedContinent.countries}</p>
+	</article>
+	<article class="info-article-continent">
+	<p class="title-continent">عدد السكان</p>
+	<p>${pickedContinent.population}</p>
+	</article>
+	<article class="info-article-continent">
+	<p class="title-continent">أكبر دولة</p>
+	<p>${pickedContinent.bigCountry}</p>
+	</article>
+	<article class="info-article-continent">
+	<p class="title-continent">اكبر عاصمة</p>
+	<p>${pickedContinent.bigCapital}</p>
+	</article>
+	<article class="info-article-continent">
+	<p class="title-continent">المساحة الكلية</p>
+	<p>${pickedContinent.area}</p>
+	</article>
+	`
+
+
+	toggleModal("continent-picker");
+
 }
 
 function pickCountry(country) {
+	toggleModal("country-picker");
+
 	if (firstTime) {
 		alert(
 			"يبدأ تشغيل النشيد الرسمي بمجرد اختيار الدولة، يمكنك الضغط على العلم لايقاف النشيد"
@@ -33,6 +59,7 @@ function pickCountry(country) {
 		firstTime = false;
 	}
 	country = COUNTRIES[currentContinent][country];
+	countryPickButton.innerHTML = country.arname;
 	infoContainer.innerHTML = `
 	<article class="info-article">
 	<p class="title">العاصمة</p>
@@ -61,16 +88,12 @@ function pickCountry(country) {
 	<p>${country["currency"]}</p>
 	</article>
 	`;
-	document.getElementsByTagName(
+	document.getElementById(
 		"title"
 	).innerHTML = `الموسوعة الجغرافية - ${country["arname"]}`;
 	flagContainer.src = `assets/flags/${country["ename"]}.svg`;
 	anthemPlayer(anthemPlayerRunning, country["anthem"]);
 }
-
-mapContainer.onclick = function resize() {
-	zoomContainer.classList.toggle("zoomIt");
-};
 
 flagContainer.onclick = () => {
 	runPauseAnthem();
