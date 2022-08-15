@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="this app made for getting base informnations about all countries if you want to get some data like language, area, relegion, population or listen to their music you are in the right place, just one click seperates you from worldencyclopedia.tk">
+    <meta name="author" content="Abdulrahman Azmy Kamel">
+    <meta name="keywords" content="world, worldencyclopedia, people, countries, vision, music">
+    <meta name="keywords" content="about world, earth, countries, data, resources, informations">
+    <title id="title">مشروع الموسوعة الجغرافية</title>
+    <link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="icons/favicon.png">
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="menu-container" onclick="menuToggle(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <a href="https://www.worldencyclopedia.tk"><button class="unhoverable">الموسوعة الجغرافية</button></a>
+        <a href="/pages/aboutproject.html"><button class="hoverable">عن المشروع</button></a>
+        <a href="/pages/aboutcreator.html"><button class="hoverable">عن المصمم</button></a>
+    </header>
+    <div id="full"></div>
+    <div id="container">
+        <div id="settings-menu"></div>
+        <div class="images">
+            <img class="map" id="map-box" src="assets/maps/world.jpg" alt="map place where maps will be shown"></img>
+            <img class="flag" id="flag-box"
+                style="cursor: url('./assets/cursors/curcur.cur'), url(./assets/cursors/curpng.png), auto;"
+                src="assets/flags/world.svg" alt="flag box where countries flags will be placed"></img>
+            <font id="status"
+                style="position: fixed; top: 15px;color: black; font-family: Arial, Helvetica, sans-serif; font-size: 1rem; cursor: pointer;">
+            </font>
+        </div>
+        <div class="select">
+            اختر قارة
+            <select onclick="run()" name="continent" id="continent">
+                <option value="world">اختر قارة</option>
+                <option value="africa">افريقيا</option>
+                <option value="asia">اسيا</option>
+                <option value="europe">اوربا</option>
+                <option value="northAmirca">امريكا الشمالية</option>
+                <option value="southAmirca">امريكا الجنوبية</option>
+                <option value="oceania">الاوقيانوسية</option>
+            </select>
+            اختر دولة
+            <select name="country" id="country">
+                <option value="world">اختر دولة</option>
+            </select>
+        </div>
+        <div id="info">
+            <h1 id="capital"></h1>
+            <h2 id="area"></h2>
+            <h3 id="population"></h3>
+            <h4 id="language"></h4>
+            <h5 id="relegion"></h5>
+            <h6 id="currency"></h6>
+            <a href="" target="_blank" id="wiki-link"><h6 id="wiki"></h6></a>
+            <audio id="anthem" src="" style="border: 1px solid red;"></audio>
+
+        </div>
+        <h5 id="hint" onclick="runPause()" style="cursor: pointer; font-size: 1.5vw;">اضغط هنا للنشيد ◀</h5>
+    </div>
+
+    <script src="JS/countries.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
