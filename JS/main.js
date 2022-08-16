@@ -1,4 +1,5 @@
-const mapContainer = document.getElementById("map-box");
+const mapIMG = document.getElementById("map-box");
+const mapContainer = document.getElementById("map-container");
 const flagContainer = document.getElementById("flag-box");
 const infoContainer = document.getElementById("info");
 const info = document.getElementById("info");
@@ -44,7 +45,7 @@ function pickContinent(continent) {
 	</article>
 	`
 
-
+	mapIMG.src = `assets/maps/${continent}.jpg`;
 	toggleModal("continent-picker");
 
 }
@@ -92,6 +93,7 @@ function pickCountry(country) {
 		"title"
 	).innerHTML = `الموسوعة الجغرافية - ${country["arname"]}`;
 	flagContainer.src = `assets/flags/${country["ename"]}.svg`;
+	mapIMG.src = `assets/maps/${country["ename"]}.jpg`;
 	anthemPlayer(anthemPlayerRunning, country["anthem"]);
 }
 
@@ -125,3 +127,11 @@ function runPauseAnthem() {
 		anthemPlaying = true;
 	}
 }
+
+let zooming = false;
+let old;
+function zoom() {
+	mapContainer.classList.toggle("zoom");
+}
+
+mapIMG.addEventListener("click", zoom);

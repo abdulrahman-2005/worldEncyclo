@@ -36,7 +36,7 @@
         </div>
         <div id="info" class="grid"></div>
         <div class="images">
-            <div class="img-container">
+            <div class="img-container" id="map-container">
                 <img class="map" id="map-box" src="assets/maps/world.jpg"
                     alt="map place where maps will be shown"></img>
             </div>
@@ -49,7 +49,7 @@
 
         </div>
     </div>
-    <dialog class="picker" id="continent-picker">
+    <dialog class="picker" id="continent-picker" onclick="toggleModal(this.id)">
         <li id="continent-picker-list">
             <button onclick="pickContinent('africa')">أفريقيا</button>
             <button onclick="pickContinent('asia')">اسيا</button>
@@ -59,7 +59,7 @@
             <button onclick="pickContinent('oceania')">الاوقيانوسية</button>
         </li>
     </dialog>
-    <dialog class="picker" id="country-picker">
+    <dialog class="picker" id="country-picker" onclick="toggleModal(this.id)">
         <li id="country-list"></li>
     </dialog>
     <audio src="" id="AnthemPlayer"></audio>
